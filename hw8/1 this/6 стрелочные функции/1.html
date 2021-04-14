@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let user = {
+            firstName: 'John',
+            sayUsual() {
+                this; //user
+
+                setTimeout(() => {
+                    console.log(this); // user
+                }, 3000);
+            },
+        };
+        user.sayUsual(); //window
+
+
+    </script>
+
+</body>
+</html>

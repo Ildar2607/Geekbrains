@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        this; //window
+
+        let user = {
+            firstName: 'John',
+            sayArrow: () => { //ссылка на эту функцию создается когда конструируется сам объект user,
+                this;
+                console.log(this); //поэтому это тоже самое что и функция fn выше
+            },
+        };
+        user.sayArrow();//window
+
+    </script>
+
+</body>
+</html>
