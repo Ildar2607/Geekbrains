@@ -30,28 +30,9 @@
 
     <script>
         'use strict';
-        /* let firstStar = document.getElementById('first');
-        let secondStar = document.getElementById('second');
-        let thirdStar = document.getElementById('third');
-        let fourthStar = document.getElementById('fourth');
-        let fifthStar = document.getElementById('fifth');
-
-        let goldenClass = 'golden';
-
-        firstStar.addEventListener('mouseover', function() {
-            if (!firstStar.classList.contains('goldenClass')) {
-                firstStar.classList.add(goldenClass);
-            }
-        });
-
-        firstStar.addEventListener('mouseout', function() {
-            firstStar.classList.remove(goldenClass);
-        }); */
-
-        // вы можете сделать используя заготовку если вам трудно,
-        // я буду делать по другому
 
         let iElems = document.querySelectorAll('i');
+
         iElems.forEach(function(i) {
             i.addEventListener('mouseover', function(event) {
                 addGoldenClass(event.target);
@@ -64,7 +45,8 @@
         function addGoldenClass(i) {
             i.classList.add('golden');
             let previousElem = i.previousElementSibling;
-            if (previousElem !== null && previousElem.tagName === 'I') {
+            if(previousElem !== null) {
+                previousElem.classList.add('golden');
                 return addGoldenClass(previousElem);
             }
         }
@@ -72,7 +54,8 @@
         function removeGoldenClass(i) {
             i.classList.remove('golden');
             let previousElem = i.previousElementSibling;
-            if (previousElem !== null && previousElem.tagName === 'I') {
+            if(previousElem !== null) {
+                previousElem.classList.remove('golden');
                 return removeGoldenClass(previousElem);
             }
         }
