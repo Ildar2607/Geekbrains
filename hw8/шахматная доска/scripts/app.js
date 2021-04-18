@@ -41,7 +41,7 @@ let app = {
         for (let i = 0; i < positions.length; i++) {
             let cell = document.querySelector(`[data-rownum="${positions[i].coordRow}"][data-colchar="${positions[i].coordCol}"]`);
             let figure = this.getFigure(positions[i].figure, positions[i].color+"Figure");
-            cell.innerHTML = figure;   
+            cell.innerHTML = figure;
         }
     },
 

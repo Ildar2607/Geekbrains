@@ -1,4 +1,6 @@
 
+
+
 const buttons = document.querySelectorAll('button');
 
 buttons.forEach(function (button) {
@@ -10,7 +12,7 @@ buttons.forEach(function (button) {
 /**
  * Функция обрабатывает клик по кнопке в карточке товара и попеременно вызывает
  * функции для показа или скрытия текста о товаре.
- * @param {MouseEvent} clickedButtonEvent 
+ * @param {MouseEvent} clickedButtonEvent
  */
 
 function handleClick(clickedButtonEvent) {
@@ -33,7 +35,7 @@ function handleClick(clickedButtonEvent) {
 
 /**
  * Функция скрывает текст с описанием товара.
- * @param {Object} card 
+ * @param {Object} card
  * @param {HTMLDivElement} card.wrap
  * @param {HTMLImageElement} card.img
  * @param {HTMLDivElement} card.productName
@@ -47,11 +49,11 @@ function hideMoreText(card) {
 
 /**
  * Функция показывает текст с описанием товара.
- * @param {Object} card 
+ * @param {Object} card
  * @param {HTMLDivElement} card.wrap
  * @param {HTMLImageElement} card.img
  * @param {HTMLDivElement} card.productName
- * @param {HTMLButtonElement} card.button 
+ * @param {HTMLButtonElement} card.button
  */
 function showMoreText(card) {
     card.img.style.display = 'none';
